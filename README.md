@@ -1,5 +1,7 @@
 # TIDAK UNTUK DIPERJUAL BELIKAN HANYA UNTUK BELAJAR!
+
 # JIKA TEMAN-TEMAN MENEMUKAN ADA YANG MENJUALNYA , HARAP HUBUNGI SAYA !
+
 # TERIMAKASIH
 
 1 . Jalankan Composer Install atau composer Update
@@ -7,4 +9,9 @@
 3 . jalankan php artisan migrate atau import data base via phpmyadmin ( file sql ada di projek )
 4 . jalankan php artisan db:seed (harus terkoneksi dengan internet soalnya mengambil data dari api raja ongkir)
 
+Lapak Arduino
+adds some feature
+--price slug
 
+change rewmote origin ya
+''' git remote set-url origin https://github.com/LapakArduino/pkkwu.git'''
