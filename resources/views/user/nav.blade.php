@@ -39,10 +39,10 @@
             </div>
 
             <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
-              {{-- <div class="site-logo">
+              <div class="site-logo">
                 <a href="#" class="js-logo-clone">INI TOKO MAMA</a>
 
-              </div> --}}
+              </div>
             </div>
             <div class="col-6 col-md-4 order-3 order-md-3 text-right">
             <div class="top-right links">
@@ -134,87 +134,46 @@
       </nav>
     </header>
 
-    @yield('content')
 
-    <footer class="site-footer border-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Tentang Kami</h3>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                  <li><a href="#"></a></li>
-                  <li class="terminal"><a href="#">Produk</a></li>
-                  <li><a href="#">Karya Siswa</a></li>
-                  <li><a href="#"></a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                  <li><a href="#">Agribisnis Pengolahan Hasil Pertanian</a></li>
-                  <li><a href="#">Agribisnis Ternak Ruminansia</a></li>
-                  <li><a href="#">Teknik Komputer dan Jaringan</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                  <i ></i>
-                  <li ><a href="#">Facebook</a></li>
-                  <li ><a href="#">Instagram</a></li>
-                  <li ><a href="#">Software</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-           <div class="col-md-6 col-lg-6">
-            <div class="block-5 mb-5">
-              <h3 class="footer-heading mb-4">Layanan Bantuan</h3>
-              <ul class="list-unstyled">
-                <li class="address">Jalan Raya Wanayasa Karangkobar</li>
-                <li class="phone"><a href="tel://23923929210">+6898989898998</a></li>
-                <li class="email">pkkwu@gmail.com</li>
-              </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-            <div class="block-7">
-              <form action="#" method="post">
-                <label for="email_subscribe" class="footer-heading">Subscribe</label>
-                <div class="form-group">
-                  <input type="text" class="form-control py-4" id="email_subscribe" placeholder="Email">
-                  <input type="submit" class="btn btn-sm btn-primary" value="Send">
-                </div>
-              </form>
-            </div>
-          </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('user.produk') }}">Beranda</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="{{ route('user.produk') }}">Produk</a>
+      </li> <li class="nav-item">
+        <a class="nav-link" href="{{ route('user.produk') }}">Profile</a>
+      </li> <li class="nav-item">
+        <a class="nav-link" href="{{ route('user.produk') }}">Kontak</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <p>
-              <a> Made with high effort and with low profile</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </footer>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
-
-  <script src="{{ asset('shopper') }}/js/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
-  <script src="{{ asset('shopper') }}/js/jquery-ui.js"></script>
-  <script src="{{ asset('shopper') }}/js/popper.min.js"></script>
-  <script src="{{ asset('shopper') }}/js/bootstrap.min.js"></script>
-  <script src="{{ asset('shopper') }}/js/owl.carousel.min.js"></script>
-  <script src="{{ asset('shopper') }}/js/jquery.magnific-popup.min.js"></script>
-  <script src="{{ asset('shopper') }}/js/aos.js"></script>
-
-  <script src="{{ asset('shopper') }}/js/main.js"></script>
-    @yield('js')
-  </body>
-</html>
+</nav>

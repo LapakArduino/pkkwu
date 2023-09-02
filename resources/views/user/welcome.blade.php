@@ -1,14 +1,14 @@
 @extends('user.app')
 @section('content')
-<div class="site-blocks-cover" style="background-image: url({{ asset('shopper') }}/images/hero_1.jpg);" data-aos="fade">
+<div class="site-blocks-cover" style="background-image: url({{ asset('shopper') }}/images/bg_skawan.png);" data-aos="fade">
     <div class="container">
     <div class="row align-items-start align-items-md-center justify-content-end">
         <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
-        <h1 class="mb-2">Cari Kebutuhan Olahraga Kamu Di Sini</h1>
+        {{-- <h1 class="mb-2">Katalog Toko Online SMKN 1 Wanayasa</h1> --}}
         <div class="intro-text text-center text-md-left">
-            <p class="mb-4">Alat olahraga disini terjamin kualitasnya dan tentunya barangnya juga original bukan kw. </p>
+            <p class="mb-4">Temukan Karya Siswa disini </p>
             <p>
-            <a href="{{ route('user.produk') }}" class="btn btn-sm btn-primary">Belanja Sekarang</a>
+            <a href="{{ route('user.produk') }}" class="btn btn-sm btn-danger">Belanja Sekarang</a>
             </p>
         </div>
         </div>
@@ -25,7 +25,7 @@
         </div>
         <div class="text">
             <h2 class="text-uppercase">Pengiriman</h2>
-            <p>Pengiriman bisa ke seluruh wilayah indonesia dengan kurir JNE</p>
+            <p>Pengiriman bisa ke seluruh wilayah indonesia dengan  kurir favoritmu</p>
         </div>
         </div>
         <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="100">
@@ -34,7 +34,7 @@
         </div>
         <div class="text">
             <h2 class="text-uppercase">Kualitas Oke</h2>
-            <p>Kualitas barangnya terjamin karena semuanya disini original bukan kw.</p>
+            <p>Kami memastikan memberikan yang terbaik kepada konsumen</p>
         </div>
         </div>
         <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="200">
@@ -69,9 +69,12 @@
                 </a>
                 <div class="block-4-text p-4">
                 <h3><a href="{{ route('user.produk.detail',['id' =>  $produk->id]) }}">{{ $produk->name }}</a></h3>
-                <p class="mb-0">{{ $produk->price }}</p>
+
+                <p class="mb-0">Rp. {{ number_format($produk->price,0,',','.') }} </p>
+                {{-- <p class="mb-0">{{ $produk->price }}</p> --}}
                 <a href="{{ route('user.produk.detail',['id' =>  $produk->id]) }}" class="btn btn-primary mt-2">Detail</a>
-                </div>
+
+            </div>
             </div>
             </div>
             @endforeach

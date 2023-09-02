@@ -15,7 +15,7 @@
           <div class="col-md-8">
             <div class="row mb-5">
               <div class="col-md-12">
-                <h2 class="h3 mb-3 text-black">Your Order</h2>
+                <h2 class="h3 mb-3 text-black">Pesanan Anda</h2>
                 <div class="p-3 p-lg-5 border">
                   <form action="{{ route('user.order.simpan') }}" method="POST">
                     @csrf
@@ -47,7 +47,7 @@
                       <tr>
                         <td class="text-black font-weight-bold"><strong>Jumlah Pembayaran</strong></td>
                         <td class="text-black font-weight-bold">
-                        <?php $alltotal = $subtotal + $ongkir; ?>  
+                        <?php $alltotal = $subtotal + $ongkir; ?>
                         <strong>Rp. {{ number_format($alltotal,2,',','.') }}</strong></td>
                       </tr>
                       <tr>
@@ -75,7 +75,7 @@
                     </select>
                     <small>Jika memilih cod maka akan dikenakan biaya tambahan sebesar Rp. 10.000,00</small>
                   </div>
-                 
+
 
                   <div class="form-group">
                     <button class="btn btn-primary btn-lg py-3 btn-block" type="submit">Pesan Sekarang</button>

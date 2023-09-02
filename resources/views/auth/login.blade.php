@@ -51,8 +51,9 @@
                     @enderror
                   </div>
                   <div class="mt-3">
-                    <button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" type="submit">SIGN IN</button>
+                    <button class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" type="submit">MASUK</button>
                   </div>
+                  <a href="/register" class="text-primary">Lupa kata sandi</a>
                   <div class="text-center mt-4 font-weight-light"> Belum Punya Akun? <a href="/register" class="text-primary">Buat</a>
                   </div>
                 </form>

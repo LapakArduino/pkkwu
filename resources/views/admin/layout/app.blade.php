@@ -4,7 +4,7 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Sport Center</title>
+		<title>Admin Skawan</title>
 		<!-- plugins:css -->
 		<link rel="stylesheet" href="{{ asset('adminassets') }}/assets/vendors/mdi/css/materialdesignicons.min.css">
 		<link rel="stylesheet" href="{{ asset('adminassets') }}/assets/vendors/css/vendor.bundle.base.css">
@@ -41,16 +41,16 @@
 									<span class="availability-status online"></span>
 								</div>
 								<div class="nav-profile-text">
-									<p class="mb-1 text-black">Admin SportCentre</p>
+									<p class="mb-1 text-black">Admin Skawan</p>
 								</div>
 							</a>
 							<div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
 								<a class="dropdown-item" href="#">
-									
+
 									<a class="dropdown-item" href="{{ route('logout') }}"
 										onclick="event.preventDefault();
 																	document.getElementById('logout-form').submit();">
-										<i class="mdi mdi-logout mr-2 text-primary"></i> Logout 
+										<i class="mdi mdi-logout mr-2 text-primary"></i> Logout
 								</a>
 
 								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -77,7 +77,7 @@
 									<!--change to offline or busy as needed-->
 								</div>
 								<div class="nav-profile-text d-flex flex-column">
-									<span class="font-weight-bold mb-2">SportCenter</span>
+									<span class="font-weight-bold mb-2">Skawan</span>
 									<span class="text-secondary text-small">Admin</span>
 								</div>
 								<i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
@@ -95,26 +95,39 @@
 								<i class="mdi mdi mdi-account-multiple menu-icon"></i>
 							</a>
 						</li>
-						<li class="nav-item ">
-							<a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
+						<li class="nav-item">
+							<a class="nav-link" {{ Request::path() === 'admin/categories' ? 'active' : '' }}" href="{{ route('admin.categories') }}">
+								<span class="menu-title">Kategori</span>
+								<i class="mdi mdi mdi-table-large menu-icon"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ route('admin.product') }}">
+								<span class="menu-title">Produk</span>
+								<i class="mdi mdi mdi-table-large menu-icon"></i>
+							</a>
+						</li>
+						{{-- <li class="nav-item ">
+							<a class="nav-item" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic1">
 								<span class="menu-title">Data Master</span>
+								<li class="nav-item"> <a class="nav-link" href="{{ route('admin.product') }}">Produk</a></li>
+								<li class="nav-item"> <a class="nav-link {{ Request::path() === 'admin/categories' ? 'active' : '' }}" href="{{ route('admin.categories') }}">Kategori</a></li>
+
 								<i class="menu-arrow"></i>
 								<i class="mdi mdi mdi-table-large menu-icon"></i>
 							</a>
-							<div class="collapse" id="ui-basic1">
+							<div class="nav-item" id="ui-basic1">
 								<ul class="nav flex-column sub-menu">
-									<li class="nav-item"> <a class="nav-link" href="{{ route('admin.product') }}">Produk</a></li>
-									<li class="nav-item"> <a class="nav-link {{ Request::path() === 'admin/categories' ? 'active' : '' }}" href="{{ route('admin.categories') }}">Kategori</a></li>
-								</ul>
+									</ul>
 							</div>
-						</li>
+						</li> --}}
 						<li class="nav-item ">
 							<a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
 								<span class="menu-title">Transaksi</span>
 								<i class="menu-arrow"></i>
 								<i class="mdi mdi-shopping menu-icon"></i>
 							</a>
-							<div class="collapse" id="ui-basic">
+							<div class="nav-item" id="ui-basic">
 								<ul class="nav flex-column sub-menu">
 								<li class="nav-item"> <a class="nav-link" href="{{ route('admin.transaksi') }}">Pesanan Baru</a></li>
 								<li class="nav-item"> <a class="nav-link" href="{{ route('admin.transaksi.perludicek') }}">Perlu Di Cek</a></li>
@@ -131,7 +144,7 @@
 								<i class="menu-arrow"></i>
 								<i class="mdi mdi-shopping menu-icon"></i>
 							</a>
-							<div class="collapse" id="ui-basic2">
+							<div class="nav-link" id="ui-basic2">
 								<ul class="nav flex-column sub-menu">
 								<li class="nav-item"> <a class="nav-link" href="{{ route('admin.pengaturan.alamat') }}"> Alamat</a></li>
 									<li class="nav-item"> <a class="nav-link" href="{{ route('admin.rekening') }}">No Rekening</a></li>
@@ -157,7 +170,7 @@
 			</div>
 			<!-- page-body-wrapper ends -->
 		</div>
-	 
+
 		<!-- container-scroller -->
 		<!-- plugins:js -->
 		<script src="{{ asset('adminassets') }}/assets/vendors/js/vendor.bundle.base.js"></script>
@@ -198,7 +211,7 @@
 		</script>
 		@endif
 		<script>
-			
+
 			var t = $('#table').DataTable({
 					"columnDefs": [ {
 							"searchable": false,

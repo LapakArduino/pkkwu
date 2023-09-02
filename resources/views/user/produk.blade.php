@@ -51,13 +51,14 @@
                 </a>
                 <div class="block-4-text p-4">
                 <h3><a href="{{ route('user.produk.detail',['id' =>  $produk->id]) }}">{{ $produk->name }}</a></h3>
-                <p class="mb-0">RP {{ $produk->price }}</p>
+                <p class="mb-0">Rp. {{ number_format($produk->price,0,',','.') }} </p>
+                {{-- <td>Rp. {{ number_format($keranjang->price,2,',','.') }} </td> --}}
                 <a href="{{ route('user.produk.detail',['id' =>  $produk->id]) }}" class="btn btn-primary mt-2">Detail</a>
                 </div>
             </div>
             </div>
             @endforeach
-            
+
 
         </div>
         <div class="row" data-aos="fade-up">
@@ -119,7 +120,7 @@
         </div> -->
         </div>
     </div>
-    
+
     </div>
 </div>
 @endsection
